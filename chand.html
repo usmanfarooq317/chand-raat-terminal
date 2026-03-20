@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,7 +31,7 @@
         width: 100%;
         height: 100%;
         padding: 28px 24px;
-        font-size: clamp(13px, 2.2vw, 18px);
+        font-size: clamp(12px, 2vw, 16px);
         line-height: 1.5;
         white-space: pre-wrap;
         font-weight: 500;
@@ -67,15 +66,15 @@
     #launch {
         display: none;
         position: absolute;
-        bottom: 50px;
+        bottom: 40px;
         left: 50%;
         transform: translateX(-50%);
-        padding: 14px 38px;
+        padding: 12px 32px;
         border-radius: 60px;
         background: rgba(15, 25, 45, 0.75);
         backdrop-filter: blur(18px);
         color: #f0f9ff;
-        font-size: clamp(15px, 2.2vw, 20px);
+        font-size: clamp(14px, 2vw, 18px);
         font-weight: 600;
         font-family: monospace;
         border: 1px solid rgba(255, 215, 0, 0.5);
@@ -102,31 +101,29 @@
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
-        width: 90%;
-        max-width: 850px;
+        width: 85%;
+        max-width: 800px;
         z-index: 25;
         background: rgba(0, 0, 0, 0.45);
         backdrop-filter: blur(20px);
         border-radius: 56px;
-        padding: 2.2rem 1.8rem;
+        padding: 1.8rem 1.5rem;
         border: 1px solid rgba(255, 215, 0, 0.4);
         box-shadow: 0 20px 40px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,215,0,0.15) inset;
         animation: fadeSlideUp 1.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
     }
 
     .chand-rabab {
-        font-size: clamp(32px, 7vw, 75px);
+        font-size: clamp(28px, 6vw, 60px);
         font-weight: 800;
-        letter-spacing: 3px;
+        letter-spacing: 2px;
         background: linear-gradient(135deg, #ffd89b, #ffb347, #ffd700, #fbbf24);
         background-size: 250% auto;
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
         animation: shineFlow 5s linear infinite, textGlow 2.2s infinite alternate;
-        margin-bottom: 18px;
-        white-space: normal;
-        word-break: keep-all;
+        margin-bottom: 12px;
     }
 
     @keyframes shineFlow {
@@ -136,12 +133,12 @@
     
     @keyframes textGlow {
         0% { filter: drop-shadow(0 0 2px #ffb347); opacity: 0.95; }
-        100% { filter: drop-shadow(0 0 25px #ffd700); opacity: 1; }
+        100% { filter: drop-shadow(0 0 20px #ffd700); opacity: 1; }
     }
 
     .love-message {
-        margin-top: 15px;
-        font-size: clamp(18px, 4vw, 28px);
+        margin-top: 10px;
+        font-size: clamp(16px, 3.5vw, 24px);
         font-weight: 600;
         background: linear-gradient(120deg, #ffb6c1, #ffd1dc, #ffe4e1);
         -webkit-background-clip: text;
@@ -153,21 +150,21 @@
     
     @keyframes heartbeat {
         0%, 100% { transform: scale(1); opacity: 0.9; }
-        50% { transform: scale(1.05); opacity: 1; text-shadow: 0 0 15px #ff69b4; }
+        50% { transform: scale(1.03); opacity: 1; }
     }
     
     .blessing {
-        margin-top: 20px;
-        font-size: clamp(14px, 2.8vw, 20px);
+        margin-top: 12px;
+        font-size: clamp(12px, 2.2vw, 16px);
         color: #fde68a;
         font-weight: 500;
         letter-spacing: 0.5px;
-        line-height: 1.6;
+        line-height: 1.5;
     }
     
     .moon-icon {
-        font-size: 3rem;
-        margin-bottom: 10px;
+        font-size: 2.5rem;
+        margin-bottom: 8px;
         display: inline-block;
         animation: floatMoon 3s infinite ease;
         filter: drop-shadow(0 0 8px #ffd700);
@@ -175,7 +172,7 @@
     
     @keyframes floatMoon {
         0% { transform: translateY(0px) rotate(0deg); }
-        50% { transform: translateY(-12px) rotate(5deg); }
+        50% { transform: translateY(-8px) rotate(5deg); }
         100% { transform: translateY(0px) rotate(0deg); }
     }
 
@@ -196,35 +193,35 @@
     #loveBtn {
         display: none;
         position: absolute;
-        bottom: 40px;
+        bottom: 35px;
         left: 50%;
         transform: translateX(-50%);
-        padding: 14px 32px;
+        padding: 10px 28px;
         border-radius: 60px;
         background: linear-gradient(135deg, rgba(255, 182, 193, 0.3), rgba(255, 105, 180, 0.4));
         backdrop-filter: blur(20px);
         color: #fff0f5;
-        font-size: clamp(16px, 3vw, 22px);
+        font-size: clamp(14px, 2.5vw, 18px);
         font-weight: bold;
         font-family: monospace;
         border: 1px solid rgba(255, 105, 180, 0.7);
         cursor: pointer;
         transition: all 0.3s ease;
         z-index: 35;
-        letter-spacing: 1.5px;
+        letter-spacing: 1px;
         box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
         white-space: nowrap;
     }
 
     #loveBtn:hover {
-        transform: translateX(-50%) scale(1.08);
+        transform: translateX(-50%) scale(1.05);
         background: rgba(255, 105, 180, 0.5);
         border-color: #ff69b4;
-        box-shadow: 0 0 35px rgba(255, 105, 180, 0.9);
+        box-shadow: 0 0 30px rgba(255, 105, 180, 0.8);
         color: #fff;
     }
 
-    /* LOVE MESSAGE MODAL - FULL SCREEN CENTERED, NO SCROLLING */
+    /* LOVE MESSAGE MODAL - FULL SCREEN CENTERED, NO SCROLLING, SMALLER FONTS */
     .love-modal-overlay {
         position: fixed;
         top: 0;
@@ -247,16 +244,15 @@
 
     .love-card {
         background: linear-gradient(145deg, #1a0f2a, #0a0515);
-        border-radius: 64px;
-        width: 85%;
-        max-width: 900px;
-        padding: 2.5rem 2.5rem;
+        border-radius: 56px;
+        width: 80%;
+        max-width: 850px;
+        padding: 1.8rem 2rem;
         border: 2px solid rgba(255, 105, 180, 0.7);
         box-shadow: 0 30px 60px rgba(0,0,0,0.8), 0 0 0 2px rgba(255,215,0,0.2) inset;
         text-align: center;
         transform: scale(0.95);
         transition: transform 0.4s ease;
-        overflow: visible;
     }
 
     .love-modal-overlay.active .love-card {
@@ -264,63 +260,62 @@
     }
 
     .love-card h2 {
-        font-size: clamp(1.8rem, 5vw, 2.4rem);
+        font-size: clamp(1.3rem, 3.5vw, 1.8rem);
         background: linear-gradient(120deg, #ffb6c1, #ff69b4, #ff1493);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
-        margin-bottom: 20px;
+        margin-bottom: 12px;
         font-family: monospace;
-        letter-spacing: 1px;
     }
 
     .heart-decoration {
-        font-size: 3.8rem;
+        font-size: 2.5rem;
         animation: pulse 1s ease-in-out infinite;
         display: inline-block;
-        margin-bottom: 15px;
+        margin-bottom: 8px;
     }
 
     @keyframes pulse {
         0%, 100% { transform: scale(1); }
-        50% { transform: scale(1.15); }
+        50% { transform: scale(1.1); }
     }
 
     .personal-message {
         background: rgba(255, 182, 193, 0.12);
-        padding: 20px 28px;
-        border-radius: 40px;
-        margin: 20px 0;
+        padding: 15px 20px;
+        border-radius: 32px;
+        margin: 12px 0;
         border: 1px solid rgba(255, 105, 180, 0.4);
     }
 
     .personal-message p {
-        font-size: clamp(1rem, 2.5vw, 1.15rem);
-        line-height: 1.6;
+        font-size: clamp(0.85rem, 2.2vw, 1rem);
+        line-height: 1.5;
         color: #ffe4e1;
-        margin: 12px 0;
+        margin: 8px 0;
     }
 
     .special-note {
         background: rgba(255, 215, 0, 0.12);
-        padding: 16px 24px;
-        border-radius: 32px;
-        margin: 18px 0;
+        padding: 12px 20px;
+        border-radius: 28px;
+        margin: 12px 0;
         border: 1px dashed #ffd700;
         color: #ffecb3;
-        font-size: clamp(1rem, 2.5vw, 1.1rem);
-        line-height: 1.5;
+        font-size: clamp(0.85rem, 2.2vw, 0.95rem);
+        line-height: 1.4;
     }
 
     .close-love {
-        margin-top: 20px;
+        margin-top: 12px;
         background: rgba(255, 105, 180, 0.35);
         border: none;
-        padding: 12px 36px;
+        padding: 10px 28px;
         border-radius: 60px;
         color: #ffe4e1;
         font-family: monospace;
-        font-size: clamp(0.95rem, 2.5vw, 1rem);
+        font-size: clamp(0.85rem, 2.2vw, 0.95rem);
         cursor: pointer;
         transition: all 0.25s ease;
         border: 1px solid #ff69b4;
@@ -331,30 +326,30 @@
     .close-love:hover {
         background: #ff69b4;
         color: white;
-        transform: scale(1.03);
-        box-shadow: 0 0 25px rgba(255,105,180,0.7);
+        transform: scale(1.02);
+        box-shadow: 0 0 20px rgba(255,105,180,0.6);
     }
     
     .modal-footer {
-        margin-top: 18px;
-        font-size: 12px;
+        margin-top: 12px;
+        font-size: 10px;
         color: #ffb6c1;
         text-align: center;
-        opacity: 0.9;
+        opacity: 0.8;
     }
 
     /* watermark */
     #watermark {
         position: fixed;
-        bottom: 16px;
-        right: 18px;
-        font-size: 11px;
+        bottom: 12px;
+        right: 15px;
+        font-size: 10px;
         font-family: monospace;
         color: #7e8aa8;
-        opacity: 0.55;
+        opacity: 0.5;
         z-index: 40;
         background: rgba(0,0,0,0.3);
-        padding: 4px 12px;
+        padding: 3px 10px;
         border-radius: 40px;
         backdrop-filter: blur(4px);
         pointer-events: none;
@@ -375,132 +370,169 @@
         position: absolute;
         border-radius: 50%;
         background: radial-gradient(circle, #ffd700, #ffb347);
-        opacity: 0.5;
+        opacity: 0.4;
         animation: twinkle 2s infinite alternate;
         z-index: 0;
         pointer-events: none;
     }
 
     @keyframes twinkle {
-        0% { opacity: 0.2; transform: scale(1);}
-        100% { opacity: 0.8; transform: scale(1.3);}
+        0% { opacity: 0.15; transform: scale(1);}
+        100% { opacity: 0.6; transform: scale(1.2);}
     }
 
-    /* Responsive adjustments */
+    /* Responsive adjustments for all screen sizes */
     @media (max-width: 768px) {
         .love-card {
-            width: 90%;
-            padding: 1.8rem;
+            width: 85%;
+            padding: 1.5rem;
             border-radius: 48px;
         }
         .personal-message {
-            padding: 16px 20px;
+            padding: 12px 16px;
         }
         .personal-message p {
-            font-size: 0.95rem;
-            margin: 10px 0;
+            font-size: 0.85rem;
+            margin: 6px 0;
         }
         .special-note {
-            padding: 14px 18px;
-            font-size: 0.9rem;
+            padding: 10px 16px;
+            font-size: 0.8rem;
         }
         .heart-decoration {
-            font-size: 2.8rem;
+            font-size: 2rem;
         }
         .love-card h2 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-        .close-love {
-            padding: 10px 28px;
-        }
-    }
-    
-    @media (max-width: 550px) {
-        #terminal { padding: 20px 16px; font-size: 11px; }
-        #final { width: 92%; padding: 1.5rem 1rem; border-radius: 44px; }
-        .love-card { 
-            width: 92%;
-            padding: 1.4rem;
-            border-radius: 40px;
-        }
-        .personal-message { 
-            padding: 12px 16px;
-            margin: 15px 0;
-        }
-        .personal-message p { 
-            font-size: 0.85rem;
-            margin: 8px 0;
-            line-height: 1.5;
-        }
-        .special-note {
-            padding: 12px 16px;
-            font-size: 0.8rem;
-            margin: 15px 0;
-        }
-        #loveBtn { 
-            white-space: nowrap; 
-            font-size: 13px; 
-            padding: 10px 20px; 
-            bottom: 30px;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
         }
         .close-love {
             padding: 8px 24px;
             font-size: 0.85rem;
-            margin-top: 15px;
+        }
+        #final {
+            padding: 1.2rem 1rem;
+        }
+        .chand-rabab {
+            font-size: clamp(24px, 5vw, 48px);
+        }
+        .love-message {
+            font-size: clamp(14px, 3vw, 20px);
+        }
+        .blessing {
+            font-size: clamp(11px, 2vw, 14px);
+        }
+    }
+    
+    @media (max-width: 550px) {
+        #terminal { padding: 18px 14px; font-size: 10px; }
+        #final { width: 88%; padding: 1rem; border-radius: 40px; }
+        .love-card { 
+            width: 90%;
+            padding: 1.2rem;
+            border-radius: 40px;
+        }
+        .personal-message { 
+            padding: 10px 12px;
+            margin: 8px 0;
+        }
+        .personal-message p { 
+            font-size: 0.75rem;
+            margin: 5px 0;
+            line-height: 1.4;
+        }
+        .special-note {
+            padding: 8px 12px;
+            font-size: 0.7rem;
+            margin: 8px 0;
+        }
+        #loveBtn { 
+            white-space: nowrap; 
+            font-size: 12px; 
+            padding: 8px 18px; 
+            bottom: 25px;
+        }
+        .close-love {
+            padding: 6px 20px;
+            font-size: 0.75rem;
+            margin-top: 8px;
         }
         .heart-decoration {
-            font-size: 2.2rem;
-            margin-bottom: 8px;
+            font-size: 1.6rem;
+            margin-bottom: 5px;
         }
         .love-card h2 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
+            font-size: 1rem;
+            margin-bottom: 6px;
         }
         .modal-footer {
-            font-size: 10px;
-            margin-top: 12px;
+            font-size: 8px;
+            margin-top: 8px;
+        }
+        .moon-icon {
+            font-size: 1.8rem;
+        }
+        .chand-rabab {
+            font-size: clamp(20px, 4.5vw, 36px);
+            margin-bottom: 8px;
+        }
+        .love-message {
+            font-size: clamp(12px, 2.5vw, 16px);
+            margin-top: 6px;
+        }
+        .blessing {
+            margin-top: 8px;
+            font-size: clamp(10px, 1.8vw, 12px);
+        }
+        #launch {
+            padding: 10px 24px;
+            font-size: 12px;
+            bottom: 30px;
         }
     }
     
     @media (min-width: 1400px) {
         .love-card {
-            max-width: 1000px;
-            padding: 3rem;
+            max-width: 950px;
+            padding: 2rem 2.2rem;
         }
         .personal-message p {
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
         .special-note {
-            font-size: 1.15rem;
+            font-size: 0.95rem;
         }
     }
     
-    /* For very small heights (like landscape on mobile) */
-    @media (max-height: 700px) {
+    /* For very small heights - ensures everything fits */
+    @media (max-height: 650px) {
         .love-card {
-            padding: 1.2rem;
+            padding: 1rem;
         }
         .personal-message {
-            padding: 12px 20px;
-            margin: 12px 0;
-        }
-        .personal-message p {
+            padding: 8px 12px;
             margin: 6px 0;
         }
+        .personal-message p {
+            margin: 4px 0;
+        }
         .special-note {
-            margin: 12px 0;
-            padding: 10px 16px;
+            padding: 6px 12px;
+            margin: 6px 0;
         }
         .heart-decoration {
-            font-size: 2rem;
-            margin-bottom: 5px;
+            font-size: 1.4rem;
+            margin-bottom: 3px;
         }
         .love-card h2 {
-            margin-bottom: 8px;
+            margin-bottom: 4px;
         }
         .close-love {
-            margin-top: 10px;
+            margin-top: 6px;
+            padding: 5px 18px;
+        }
+        .modal-footer {
+            margin-top: 6px;
         }
     }
 </style>
@@ -517,16 +549,15 @@
     <div class="love-message">❤️ For My Mano & My Jaan ❤️</div>
     <div class="blessing">
         🌟 May this beautiful night bring endless joy,<br>
-        moonlit dreams, and love that shines brighter than the stars 🌟<br>
-        ✨✨✨
+        moonlit dreams, and love that shines brighter than the stars 🌟
     </div>
-    <div style="margin-top: 28px; font-size: 13px; letter-spacing: 2px; color: #fbbf24;">✦  چاند رات مبارک  ✦</div>
+    <div style="margin-top: 15px; font-size: 11px; letter-spacing: 2px; color: #fbbf24;">✦  چاند رات مبارک  ✦</div>
 </div>
 
 <!-- Love Message Button -->
 <button id="loveBtn">💖 Send Love to My Mano & Jaan 💖</button>
 
-<!-- Love Message Modal - FULL SCREEN CENTERED, NO SCROLLING -->
+<!-- Love Message Modal - FULL SCREEN CENTERED, OPTIMIZED FONTS -->
 <div id="loveModal" class="love-modal-overlay">
     <div class="love-card">
         <div class="heart-decoration">❤️💖❤️</div>
@@ -613,12 +644,12 @@
                     terminalDiv.innerText = fullText;
                     terminalDiv.scrollTop = terminalDiv.scrollHeight;
                     currentChar++;
-                    setTimeout(typeNextChar, 18);
+                    setTimeout(typeNextChar, 16);
                 } else {
                     currentLine++;
                     currentChar = 0;
                     if (currentLine < plainLines.length) {
-                        setTimeout(typeNextChar, 45);
+                        setTimeout(typeNextChar, 40);
                     } else {
                         typingActive = false;
                         applySyntaxHighlighting();
@@ -649,31 +680,31 @@
         let particlesArray = [];
         
         function createFirework(x, y) {
-            const particleCount = 80 + Math.floor(Math.random() * 50);
+            const particleCount = 70 + Math.floor(Math.random() * 40);
             for (let i = 0; i < particleCount; i++) {
                 const angle = Math.random() * Math.PI * 2;
-                const speed = 2 + Math.random() * 7;
-                const vx = Math.cos(angle) * speed * (Math.random() * 1.3);
-                const vy = Math.sin(angle) * speed * (Math.random() * 1.3);
+                const speed = 2 + Math.random() * 6;
+                const vx = Math.cos(angle) * speed * (Math.random() * 1.2);
+                const vy = Math.sin(angle) * speed * (Math.random() * 1.2);
                 const isPink = Math.random() > 0.6;
                 particlesArray.push({
                     x, y, vx, vy,
-                    size: Math.random() * 3.5 + 1,
-                    life: 80 + Math.random() * 45,
-                    maxLife: 120,
+                    size: Math.random() * 3 + 1,
+                    life: 70 + Math.random() * 40,
+                    maxLife: 110,
                     color: isPink ? `hsl(${330 + Math.random() * 30}, 85%, 65%)` : `hsl(${45 + Math.random() * 30}, 90%, 60%)`,
                     gravity: 0.1
                 });
             }
-            for (let i = 0; i < 25; i++) {
+            for (let i = 0; i < 20; i++) {
                 particlesArray.push({
-                    x: x + (Math.random() - 0.5) * 20,
-                    y: y + (Math.random() - 0.5) * 20,
-                    vx: (Math.random() - 0.5) * 4,
-                    vy: (Math.random() - 0.8) * 4.5,
-                    size: Math.random() * 2.5,
-                    life: 50,
-                    maxLife: 60,
+                    x: x + (Math.random() - 0.5) * 18,
+                    y: y + (Math.random() - 0.5) * 18,
+                    vx: (Math.random() - 0.5) * 3.5,
+                    vy: (Math.random() - 0.8) * 4,
+                    size: Math.random() * 2,
+                    life: 45,
+                    maxLife: 55,
                     color: `hsl(${Math.random() * 360}, 85%, 70%)`,
                     gravity: 0.07
                 });
@@ -692,7 +723,7 @@
                 randomFirework();
                 if (Math.random() > 0.6) setTimeout(randomFirework, 180);
             } else {
-                for (let i = 0; i < 3; i++) setTimeout(() => randomFirework(), i * 150);
+                for (let i = 0; i < 2; i++) setTimeout(() => randomFirework(), i * 150);
             }
         }, 900);
         
@@ -703,7 +734,7 @@
                 p.x += p.vx;
                 p.y += p.vy;
                 if (p.gravity) p.vy += p.gravity;
-                p.life -= 1.3;
+                p.life -= 1.2;
                 const lifeFactor = Math.min(1, p.life / p.maxLife);
                 ctx.globalAlpha = Math.max(0, lifeFactor * 0.9);
                 ctx.fillStyle = p.color;
@@ -742,12 +773,12 @@
                 launchBtn.style.display = "none";
                 finalDiv.style.display = "block";
                 loveBtn.style.display = "block";
-                for (let i = 0; i < 15; i++) {
+                for (let i = 0; i < 12; i++) {
                     setTimeout(() => {
                         const cx = canvas.width * (0.2 + Math.random() * 0.6);
                         const cy = canvas.height * (0.3 + Math.random() * 0.5);
                         createFirework(cx, cy);
-                    }, i * 80);
+                    }, i * 70);
                 }
                 let extraSalvo = setInterval(() => {
                     if (finalDiv.style.display === "block") {
@@ -764,7 +795,7 @@
         // ------------------------------
         function openLoveModal() {
             loveModal.classList.add("active");
-            for (let i = 0; i < 8; i++) {
+            for (let i = 0; i < 6; i++) {
                 setTimeout(() => {
                     const cx = canvas.width * (0.2 + Math.random() * 0.6);
                     const cy = canvas.height * (0.3 + Math.random() * 0.5);
@@ -801,13 +832,13 @@
         
         // generate golden stars
         function generateStars() {
-            for (let i = 0; i < 150; i++) {
+            for (let i = 0; i < 120; i++) {
                 const star = document.createElement('div');
                 star.classList.add('star-dust');
                 star.style.position = 'absolute';
-                star.style.width = Math.random() * 3 + 1 + 'px';
+                star.style.width = Math.random() * 2.5 + 1 + 'px';
                 star.style.height = star.style.width;
-                star.style.backgroundColor = `rgba(255, 215, 0, ${Math.random() * 0.7 + 0.2})`;
+                star.style.backgroundColor = `rgba(255, 215, 0, ${Math.random() * 0.6 + 0.2})`;
                 star.style.left = Math.random() * 100 + '%';
                 star.style.top = Math.random() * 100 + '%';
                 star.style.animationDelay = Math.random() * 5 + 's';
