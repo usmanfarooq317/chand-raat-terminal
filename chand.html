@@ -1,33 +1,31 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no"
-    />
-    <title>Chand Raat Mubarak | For My Mano & Jaan ❤️</title>
-    <style>
-      * {
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Chand Raat Mubarak | For My Mano & Jaan ❤️</title>
+<style>
+    * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
         user-select: none;
-      }
+    }
 
-      body {
+    body {
         margin: 0;
-        font-family: "SF Mono", "Fira Code", "Cascadia Code", monospace;
+        font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
         background: radial-gradient(circle at 30% 10%, #0a0f2a, #030617);
         overflow: hidden;
         color: #e2e8f0;
         height: 100vh;
         width: 100vw;
         position: relative;
-      }
+    }
 
-      /* TERMINAL PANEL */
-      #terminal {
+    /* TERMINAL PANEL */
+    #terminal {
         position: absolute;
         top: 0;
         left: 0;
@@ -44,43 +42,29 @@
         overflow-y: auto;
         scrollbar-width: thin;
         letter-spacing: 0.3px;
-        text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+        text-shadow: 0 0 2px rgba(0,0,0,0.5);
         pointer-events: auto;
-      }
-
-      #terminal::-webkit-scrollbar {
+    }
+    
+    #terminal::-webkit-scrollbar {
         width: 4px;
-      }
-      #terminal::-webkit-scrollbar-track {
+    }
+    #terminal::-webkit-scrollbar-track {
         background: #0f172a;
-      }
-      #terminal::-webkit-scrollbar-thumb {
+    }
+    #terminal::-webkit-scrollbar-thumb {
         background: #f59e0b;
         border-radius: 6px;
-      }
+    }
 
-      .keyword {
-        color: #c084fc;
-        font-weight: 500;
-        text-shadow: 0 0 3px #a855f7;
-      }
-      .func {
-        color: #fbbf24;
-        font-weight: 500;
-      }
-      .string {
-        color: #4ade80;
-      }
-      .comment {
-        color: #64748b;
-        font-style: italic;
-      }
-      .number {
-        color: #f59e0b;
-      }
+    .keyword { color: #c084fc; font-weight: 500; text-shadow: 0 0 3px #a855f7; }
+    .func { color: #fbbf24; font-weight: 500; }
+    .string { color: #4ade80; }
+    .comment { color: #64748b; font-style: italic; }
+    .number { color: #f59e0b; }
 
-      /* GLOW BUTTON */
-      #launch {
+    /* GLOW BUTTON */
+    #launch {
         display: none;
         position: absolute;
         bottom: 50px;
@@ -100,18 +84,18 @@
         z-index: 30;
         letter-spacing: 1px;
         box-shadow: 0 0 12px rgba(255, 200, 0, 0.3);
-      }
+    }
 
-      #launch:hover {
+    #launch:hover {
         transform: translateX(-50%) scale(1.07);
         background: rgba(255, 150, 0, 0.3);
         border-color: #ffd700;
         box-shadow: 0 0 28px rgba(255, 215, 0, 0.8);
         color: white;
-      }
+    }
 
-      /* FINAL CARD */
-      #final {
+    /* FINAL CARD */
+    #final {
         display: none;
         position: absolute;
         top: 50%;
@@ -126,13 +110,11 @@
         border-radius: 56px;
         padding: 2.2rem 1.8rem;
         border: 1px solid rgba(255, 215, 0, 0.4);
-        box-shadow:
-          0 20px 40px rgba(0, 0, 0, 0.6),
-          0 0 0 1px rgba(255, 215, 0, 0.15) inset;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,215,0,0.15) inset;
         animation: fadeSlideUp 1.2s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-      }
+    }
 
-      .chand-rabab {
+    .chand-rabab {
         font-size: clamp(32px, 7vw, 75px);
         font-weight: 800;
         letter-spacing: 3px;
@@ -141,35 +123,23 @@
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
-        animation:
-          shineFlow 5s linear infinite,
-          textGlow 2.2s infinite alternate;
+        animation: shineFlow 5s linear infinite, textGlow 2.2s infinite alternate;
         margin-bottom: 18px;
         white-space: normal;
         word-break: keep-all;
-      }
+    }
 
-      @keyframes shineFlow {
-        0% {
-          background-position: 0% 50%;
-        }
-        100% {
-          background-position: 200% 50%;
-        }
-      }
+    @keyframes shineFlow {
+        0% { background-position: 0% 50%; }
+        100% { background-position: 200% 50%; }
+    }
+    
+    @keyframes textGlow {
+        0% { filter: drop-shadow(0 0 2px #ffb347); opacity: 0.95; }
+        100% { filter: drop-shadow(0 0 25px #ffd700); opacity: 1; }
+    }
 
-      @keyframes textGlow {
-        0% {
-          filter: drop-shadow(0 0 2px #ffb347);
-          opacity: 0.95;
-        }
-        100% {
-          filter: drop-shadow(0 0 25px #ffd700);
-          opacity: 1;
-        }
-      }
-
-      .love-message {
+    .love-message {
         margin-top: 15px;
         font-size: clamp(18px, 4vw, 28px);
         font-weight: 600;
@@ -179,65 +149,51 @@
         color: transparent;
         letter-spacing: 1px;
         animation: heartbeat 1.5s ease-in-out infinite;
-      }
-
-      @keyframes heartbeat {
-        0%,
-        100% {
-          transform: scale(1);
-          opacity: 0.9;
-        }
-        50% {
-          transform: scale(1.05);
-          opacity: 1;
-          text-shadow: 0 0 15px #ff69b4;
-        }
-      }
-
-      .blessing {
+    }
+    
+    @keyframes heartbeat {
+        0%, 100% { transform: scale(1); opacity: 0.9; }
+        50% { transform: scale(1.05); opacity: 1; text-shadow: 0 0 15px #ff69b4; }
+    }
+    
+    .blessing {
         margin-top: 20px;
         font-size: clamp(14px, 2.8vw, 20px);
         color: #fde68a;
         font-weight: 500;
         letter-spacing: 0.5px;
         line-height: 1.6;
-      }
-
-      .moon-icon {
+    }
+    
+    .moon-icon {
         font-size: 3rem;
         margin-bottom: 10px;
         display: inline-block;
         animation: floatMoon 3s infinite ease;
         filter: drop-shadow(0 0 8px #ffd700);
-      }
+    }
+    
+    @keyframes floatMoon {
+        0% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-12px) rotate(5deg); }
+        100% { transform: translateY(0px) rotate(0deg); }
+    }
 
-      @keyframes floatMoon {
+    @keyframes fadeSlideUp {
         0% {
-          transform: translateY(0px) rotate(0deg);
-        }
-        50% {
-          transform: translateY(-12px) rotate(5deg);
+            opacity: 0;
+            transform: translate(-50%, 30%);
+            filter: blur(6px);
         }
         100% {
-          transform: translateY(0px) rotate(0deg);
+            opacity: 1;
+            transform: translate(-50%, -50%);
+            filter: blur(0);
         }
-      }
+    }
 
-      @keyframes fadeSlideUp {
-        0% {
-          opacity: 0;
-          transform: translate(-50%, 30%);
-          filter: blur(6px);
-        }
-        100% {
-          opacity: 1;
-          transform: translate(-50%, -50%);
-          filter: blur(0);
-        }
-      }
-
-      /* WISH BUTTON (Center Bottom) */
-      #loveBtn {
+    /* WISH BUTTON (Center Bottom) */
+    #loveBtn {
         display: none;
         position: absolute;
         bottom: 40px;
@@ -245,11 +201,7 @@
         transform: translateX(-50%);
         padding: 14px 32px;
         border-radius: 60px;
-        background: linear-gradient(
-          135deg,
-          rgba(255, 182, 193, 0.3),
-          rgba(255, 105, 180, 0.4)
-        );
+        background: linear-gradient(135deg, rgba(255, 182, 193, 0.3), rgba(255, 105, 180, 0.4));
         backdrop-filter: blur(20px);
         color: #fff0f5;
         font-size: clamp(16px, 3vw, 22px);
@@ -262,130 +214,137 @@
         letter-spacing: 1.5px;
         box-shadow: 0 0 20px rgba(255, 105, 180, 0.4);
         white-space: nowrap;
-      }
+    }
 
-      #loveBtn:hover {
+    #loveBtn:hover {
         transform: translateX(-50%) scale(1.08);
         background: rgba(255, 105, 180, 0.5);
         border-color: #ff69b4;
         box-shadow: 0 0 35px rgba(255, 105, 180, 0.9);
         color: #fff;
-      }
+    }
 
-      /* LOVE MESSAGE MODAL */
-      .love-modal-overlay {
+    /* LOVE MESSAGE MODAL - FULL SCREEN CENTERED, NO SCROLLING */
+    .love-modal-overlay {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.92);
-        backdrop-filter: blur(20px);
+        background: rgba(0, 0, 0, 0.94);
+        backdrop-filter: blur(24px);
         z-index: 100;
         display: flex;
         align-items: center;
         justify-content: center;
         visibility: hidden;
         transition: all 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-      }
+    }
 
-      .love-modal-overlay.active {
+    .love-modal-overlay.active {
         visibility: visible;
-      }
+    }
 
-      .love-card {
+    .love-card {
         background: linear-gradient(145deg, #1a0f2a, #0a0515);
-        border-radius: 56px;
-        max-width: 550px;
-        width: 90%;
-        padding: 2.5rem 2rem;
-        border: 2px solid rgba(255, 105, 180, 0.6);
-        box-shadow:
-          0 30px 50px rgba(0, 0, 0, 0.8),
-          0 0 0 2px rgba(255, 215, 0, 0.2) inset;
+        border-radius: 64px;
+        width: 85%;
+        max-width: 900px;
+        padding: 2.5rem 2.5rem;
+        border: 2px solid rgba(255, 105, 180, 0.7);
+        box-shadow: 0 30px 60px rgba(0,0,0,0.8), 0 0 0 2px rgba(255,215,0,0.2) inset;
         text-align: center;
-        position: relative;
-        transform: scale(0.92);
+        transform: scale(0.95);
         transition: transform 0.4s ease;
-      }
+        overflow: visible;
+    }
 
-      .love-modal-overlay.active .love-card {
+    .love-modal-overlay.active .love-card {
         transform: scale(1);
-      }
+    }
 
-      .love-card h2 {
-        font-size: 2.2rem;
+    .love-card h2 {
+        font-size: clamp(1.8rem, 5vw, 2.4rem);
         background: linear-gradient(120deg, #ffb6c1, #ff69b4, #ff1493);
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
         margin-bottom: 20px;
         font-family: monospace;
-      }
+        letter-spacing: 1px;
+    }
 
-      .heart-decoration {
-        font-size: 3rem;
+    .heart-decoration {
+        font-size: 3.8rem;
         animation: pulse 1s ease-in-out infinite;
         display: inline-block;
-      }
+        margin-bottom: 15px;
+    }
 
-      @keyframes pulse {
-        0%,
-        100% {
-          transform: scale(1);
-        }
-        50% {
-          transform: scale(1.2);
-        }
-      }
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.15); }
+    }
 
-      .personal-message {
-        background: rgba(255, 182, 193, 0.1);
-        padding: 25px;
+    .personal-message {
+        background: rgba(255, 182, 193, 0.12);
+        padding: 20px 28px;
         border-radius: 40px;
         margin: 20px 0;
-        border: 1px solid rgba(255, 105, 180, 0.3);
-      }
+        border: 1px solid rgba(255, 105, 180, 0.4);
+    }
 
-      .personal-message p {
-        font-size: 1.3rem;
-        line-height: 1.8;
+    .personal-message p {
+        font-size: clamp(1rem, 2.5vw, 1.15rem);
+        line-height: 1.6;
         color: #ffe4e1;
-        margin: 15px 0;
-      }
+        margin: 12px 0;
+    }
 
-      .special-note {
-        background: rgba(255, 215, 0, 0.1);
-        padding: 15px;
-        border-radius: 30px;
-        margin-top: 20px;
+    .special-note {
+        background: rgba(255, 215, 0, 0.12);
+        padding: 16px 24px;
+        border-radius: 32px;
+        margin: 18px 0;
         border: 1px dashed #ffd700;
         color: #ffecb3;
-      }
+        font-size: clamp(1rem, 2.5vw, 1.1rem);
+        line-height: 1.5;
+    }
 
-      .close-love {
+    .close-love {
         margin-top: 20px;
-        background: rgba(255, 105, 180, 0.3);
+        background: rgba(255, 105, 180, 0.35);
         border: none;
-        padding: 12px 28px;
-        border-radius: 50px;
+        padding: 12px 36px;
+        border-radius: 60px;
         color: #ffe4e1;
         font-family: monospace;
-        font-size: 1rem;
+        font-size: clamp(0.95rem, 2.5vw, 1rem);
         cursor: pointer;
-        transition: 0.2s;
+        transition: all 0.25s ease;
         border: 1px solid #ff69b4;
-      }
+        display: inline-block;
+        font-weight: 600;
+    }
 
-      .close-love:hover {
+    .close-love:hover {
         background: #ff69b4;
         color: white;
-        transform: scale(1.02);
-        box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
-      }
+        transform: scale(1.03);
+        box-shadow: 0 0 25px rgba(255,105,180,0.7);
+    }
+    
+    .modal-footer {
+        margin-top: 18px;
+        font-size: 12px;
+        color: #ffb6c1;
+        text-align: center;
+        opacity: 0.9;
+    }
 
-      /* watermark */
-      #watermark {
+    /* watermark */
+    #watermark {
         position: fixed;
         bottom: 16px;
         right: 18px;
@@ -394,14 +353,14 @@
         color: #7e8aa8;
         opacity: 0.55;
         z-index: 40;
-        background: rgba(0, 0, 0, 0.3);
+        background: rgba(0,0,0,0.3);
         padding: 4px 12px;
         border-radius: 40px;
         backdrop-filter: blur(4px);
         pointer-events: none;
-      }
+    }
 
-      canvas {
+    canvas {
         position: absolute;
         top: 0;
         left: 0;
@@ -410,9 +369,9 @@
         display: block;
         z-index: 1;
         pointer-events: none;
-      }
+    }
 
-      .star-dust {
+    .star-dust {
         position: absolute;
         border-radius: 50%;
         background: radial-gradient(circle, #ffd700, #ffb347);
@@ -420,309 +379,349 @@
         animation: twinkle 2s infinite alternate;
         z-index: 0;
         pointer-events: none;
-      }
+    }
 
-      @keyframes twinkle {
-        0% {
-          opacity: 0.2;
-          transform: scale(1);
-        }
-        100% {
-          opacity: 0.8;
-          transform: scale(1.3);
-        }
-      }
+    @keyframes twinkle {
+        0% { opacity: 0.2; transform: scale(1);}
+        100% { opacity: 0.8; transform: scale(1.3);}
+    }
 
-      @media (max-width: 550px) {
-        #terminal {
-          padding: 20px 16px;
-          font-size: 11px;
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .love-card {
+            width: 90%;
+            padding: 1.8rem;
+            border-radius: 48px;
         }
-        #final {
-          width: 92%;
-          padding: 1.5rem 1rem;
-          border-radius: 44px;
+        .personal-message {
+            padding: 16px 20px;
         }
         .personal-message p {
-          font-size: 1rem;
+            font-size: 0.95rem;
+            margin: 10px 0;
+        }
+        .special-note {
+            padding: 14px 18px;
+            font-size: 0.9rem;
+        }
+        .heart-decoration {
+            font-size: 2.8rem;
         }
         .love-card h2 {
-          font-size: 1.6rem;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
         }
-        #loveBtn {
-          white-space: nowrap;
-          font-size: 14px;
-          padding: 10px 22px;
-          bottom: 30px;
+        .close-love {
+            padding: 10px 28px;
         }
-      }
-    </style>
-  </head>
-  <body>
-    <canvas id="fx"></canvas>
-    <div id="terminal"></div>
-    <button id="launch">🌙✨ Celebrate Chand Raat ✨🌙</button>
+    }
+    
+    @media (max-width: 550px) {
+        #terminal { padding: 20px 16px; font-size: 11px; }
+        #final { width: 92%; padding: 1.5rem 1rem; border-radius: 44px; }
+        .love-card { 
+            width: 92%;
+            padding: 1.4rem;
+            border-radius: 40px;
+        }
+        .personal-message { 
+            padding: 12px 16px;
+            margin: 15px 0;
+        }
+        .personal-message p { 
+            font-size: 0.85rem;
+            margin: 8px 0;
+            line-height: 1.5;
+        }
+        .special-note {
+            padding: 12px 16px;
+            font-size: 0.8rem;
+            margin: 15px 0;
+        }
+        #loveBtn { 
+            white-space: nowrap; 
+            font-size: 13px; 
+            padding: 10px 20px; 
+            bottom: 30px;
+        }
+        .close-love {
+            padding: 8px 24px;
+            font-size: 0.85rem;
+            margin-top: 15px;
+        }
+        .heart-decoration {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+        }
+        .love-card h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .modal-footer {
+            font-size: 10px;
+            margin-top: 12px;
+        }
+    }
+    
+    @media (min-width: 1400px) {
+        .love-card {
+            max-width: 1000px;
+            padding: 3rem;
+        }
+        .personal-message p {
+            font-size: 1.2rem;
+        }
+        .special-note {
+            font-size: 1.15rem;
+        }
+    }
+    
+    /* For very small heights (like landscape on mobile) */
+    @media (max-height: 700px) {
+        .love-card {
+            padding: 1.2rem;
+        }
+        .personal-message {
+            padding: 12px 20px;
+            margin: 12px 0;
+        }
+        .personal-message p {
+            margin: 6px 0;
+        }
+        .special-note {
+            margin: 12px 0;
+            padding: 10px 16px;
+        }
+        .heart-decoration {
+            font-size: 2rem;
+            margin-bottom: 5px;
+        }
+        .love-card h2 {
+            margin-bottom: 8px;
+        }
+        .close-love {
+            margin-top: 10px;
+        }
+    }
+</style>
+</head>
+<body>
 
-    <div id="final">
-      <div class="moon-icon">🌙⭐✨</div>
-      <div class="chand-rabab">🌙 Chand Raat Mubarak ✨</div>
-      <div class="love-message">❤️ For My Mano & My Jaan ❤️</div>
-      <div class="blessing">
-        🌟 May this beautiful night bring endless joy,<br />
-        moonlit dreams, and love that shines brighter than the stars 🌟<br />
+<canvas id="fx"></canvas>
+<div id="terminal"></div>
+<button id="launch">🌙✨ Celebrate Chand Raat ✨🌙</button>
+
+<div id="final">
+    <div class="moon-icon">🌙⭐✨</div>
+    <div class="chand-rabab">🌙 Chand Raat Mubarak ✨</div>
+    <div class="love-message">❤️ For My Mano & My Jaan ❤️</div>
+    <div class="blessing">
+        🌟 May this beautiful night bring endless joy,<br>
+        moonlit dreams, and love that shines brighter than the stars 🌟<br>
         ✨✨✨
-      </div>
-      <div
-        style="
-          margin-top: 28px;
-          font-size: 13px;
-          letter-spacing: 2px;
-          color: #fbbf24;
-        "
-      >
-        ✦ چاند رات مبارک ✦
-      </div>
     </div>
+    <div style="margin-top: 28px; font-size: 13px; letter-spacing: 2px; color: #fbbf24;">✦  چاند رات مبارک  ✦</div>
+</div>
 
-    <!-- Love Message Button -->
-    <button id="loveBtn">💖 Send Love to My Mano & Jaan 💖</button>
+<!-- Love Message Button -->
+<button id="loveBtn">💖 Send Love to My Mano & Jaan 💖</button>
 
-    <!-- Love Message Modal -->
-    <div id="loveModal" class="love-modal-overlay">
-      <div class="love-card">
+<!-- Love Message Modal - FULL SCREEN CENTERED, NO SCROLLING -->
+<div id="loveModal" class="love-modal-overlay">
+    <div class="love-card">
         <div class="heart-decoration">❤️💖❤️</div>
         <h2>To My Dearest Mano & Jaan</h2>
         <div class="personal-message">
-          <p>🌙✨</p>
-          <p>
-            <strong>My Beautiful Mano,</strong> your smile is like the crescent
-            moon — lighting up my darkest nights.
-          </p>
-          <p>
-            <strong>My Sweet Jaan,</strong> your love is the star that guides me
-            through every season.
-          </p>
-          <p>
-            On this blessed Chand Raat, I pray that our love shines brighter
-            than a thousand moons, that every moment we share becomes a
-            beautiful memory, and that Allah fills your life with endless
-            happiness, peace, and prosperity.
-          </p>
-          <p>
-            You are my greatest blessing, my heart's home, my forever and
-            always. 💕
-          </p>
-          <p>✨ <strong>Chand Raat Mubarak, My Love!</strong> ✨</p>
+            <p>🌙✨</p>
+            <p><strong>My Beautiful Mano,</strong><br>
+            Your smile is like the crescent moon — lighting up my darkest nights.</p>
+            
+            <p><strong>My Sweet Jaan,</strong><br>
+            Your love is the star that guides me through every season.</p>
+            
+            <p>On this blessed Chand Raat, I pray that our love shines brighter than a thousand moons, that every moment we share becomes a beautiful memory, and that Allah fills your life with endless happiness, peace, and prosperity.</p>
+            
+            <p>You are my greatest blessing, my heart's home, my forever and always. 💕</p>
+            
+            <p>✨ <strong>Chand Raat Mubarak, My Love!</strong> ✨</p>
         </div>
         <div class="special-note">
-          💝 "Tumhare bina yeh chaand adhoora hai,<br />
-          Tumhare saath har raat poori hoti hai." 💝
+            💝 "Tumhare bina yeh chaand adhoora hai,<br>
+            Tumhare saath har raat poori hoti hai." 💝
         </div>
-        <button class="close-love" id="closeLoveBtn">
-          ✨ Close & Feel the Love ✨
-        </button>
-        <div style="margin-top: 15px; font-size: 11px; color: #ffb6c1">
-          *Forever yours, with all my heart*
-        </div>
-      </div>
+        <button class="close-love" id="closeLoveBtn">✨ Close & Feel the Love ✨</button>
+        <div class="modal-footer">*Forever yours, with all my heart*</div>
     </div>
+</div>
 
-    <div id="watermark">✨ Made with Love for Mano & Jaan ✨</div>
+<div id="watermark">✨ Made with Love for Mano & Jaan ✨</div>
 
-    <script>
-      (function () {
+<script>
+    (function() {
         // ------------------------------
         // TERMINAL TYPING EFFECT - CHAND RAAT THEME
         // ------------------------------
         const terminalDiv = document.getElementById("terminal");
-
+        
         const plainLines = [
-          "// 🌙 Chand Raat Celebration System Loading...",
-          "> 🌙 Moon sighting confirmed!",
-          "> ✨ Hilal spotted with love and blessings",
-          "> 📡 Connecting to the hearts of Mano & Jaan...",
-          "",
-          "const love = 'infinite';",
-          "let chandRaatJoy = 1000;",
-          "const blessing = 'Mubarak 💕';",
-          "// loading beautiful memories, sweet moments, and endless affection...",
-          "> ❤️ Connection established with pure hearts!",
-          "> 🎆 Moonlit fireworks ready",
-          "> 💫 Click the button to celebrate Chand Raat with your loved ones!",
+            "// 🌙 Chand Raat Celebration System Loading...",
+            "> 🌙 Moon sighting confirmed!",
+            "> ✨ Hilal spotted with love and blessings",
+            "> 📡 Connecting to the hearts of Mano & Jaan...",
+            "",
+            "const love = 'infinite';",
+            "let chandRaatJoy = 1000;",
+            "const blessing = 'Mubarak 💕';",
+            "// loading beautiful memories, sweet moments, and endless affection...",
+            "> ❤️ Connection established with pure hearts!",
+            "> 🎆 Moonlit fireworks ready",
+            "> 💫 Click the button to celebrate Chand Raat with your loved ones!"
         ];
-
+        
         let currentLine = 0;
         let currentChar = 0;
         let typingActive = true;
-
+        
         function applySyntaxHighlighting() {
-          let content = terminalDiv.innerHTML;
-          content = content.replace(
-            /\b(const|let|var|function|return|if|else)\b/g,
-            '<span class="keyword">$1</span>',
-          );
-          content = content.replace(
-            /'([^']*)'/g,
-            "<span class=\"string\">'$1'</span>",
-          );
-          content = content.replace(
-            /("([^"]*)")/g,
-            '<span class="string">$1</span>',
-          );
-          content = content.replace(
-            /\b(\d+)\b/g,
-            '<span class="number">$1</span>',
-          );
-          content = content.replace(
-            /\/\/(.*)/g,
-            '<span class="comment">//$1</span>',
-          );
-          content = content.replace(/(>)/g, '<span class="func">$1</span>');
-          terminalDiv.innerHTML = content;
+            let content = terminalDiv.innerHTML;
+            content = content.replace(/\b(const|let|var|function|return|if|else)\b/g, '<span class="keyword">$1</span>');
+            content = content.replace(/'([^']*)'/g, '<span class="string">\'$1\'</span>');
+            content = content.replace(/("([^"]*)")/g, '<span class="string">$1</span>');
+            content = content.replace(/\b(\d+)\b/g, '<span class="number">$1</span>');
+            content = content.replace(/\/\/(.*)/g, '<span class="comment">//$1</span>');
+            content = content.replace(/(>)/g, '<span class="func">$1</span>');
+            terminalDiv.innerHTML = content;
         }
-
+        
         function typeNextChar() {
-          if (!typingActive) return;
-          if (currentLine < plainLines.length) {
-            const line = plainLines[currentLine];
-            if (currentChar < line.length) {
-              if (!window.typedLinesCache) window.typedLinesCache = [];
-              if (window.typedLinesCache[currentLine] === undefined)
-                window.typedLinesCache[currentLine] = "";
-              window.typedLinesCache[currentLine] += line[currentChar];
-              let fullText = "";
-              for (let i = 0; i <= currentLine; i++) {
-                if (window.typedLinesCache[i] !== undefined) {
-                  fullText += window.typedLinesCache[i];
-                  if (
-                    i !== currentLine ||
-                    (i === currentLine && currentChar === line.length - 1)
-                  ) {
-                    fullText += "\n";
-                  }
+            if (!typingActive) return;
+            if (currentLine < plainLines.length) {
+                const line = plainLines[currentLine];
+                if (currentChar < line.length) {
+                    if (!window.typedLinesCache) window.typedLinesCache = [];
+                    if (window.typedLinesCache[currentLine] === undefined) window.typedLinesCache[currentLine] = '';
+                    window.typedLinesCache[currentLine] += line[currentChar];
+                    let fullText = '';
+                    for (let i = 0; i <= currentLine; i++) {
+                        if (window.typedLinesCache[i] !== undefined) {
+                            fullText += window.typedLinesCache[i];
+                            if (i !== currentLine || (i === currentLine && currentChar === line.length-1)) {
+                                fullText += '\n';
+                            }
+                        }
+                    }
+                    terminalDiv.innerText = fullText;
+                    terminalDiv.scrollTop = terminalDiv.scrollHeight;
+                    currentChar++;
+                    setTimeout(typeNextChar, 18);
+                } else {
+                    currentLine++;
+                    currentChar = 0;
+                    if (currentLine < plainLines.length) {
+                        setTimeout(typeNextChar, 45);
+                    } else {
+                        typingActive = false;
+                        applySyntaxHighlighting();
+                        const launchBtn = document.getElementById("launch");
+                        launchBtn.style.display = "block";
+                        launchBtn.style.animation = "fadeInUp 0.5s ease";
+                    }
                 }
-              }
-              terminalDiv.innerText = fullText;
-              terminalDiv.scrollTop = terminalDiv.scrollHeight;
-              currentChar++;
-              setTimeout(typeNextChar, 18);
-            } else {
-              currentLine++;
-              currentChar = 0;
-              if (currentLine < plainLines.length) {
-                setTimeout(typeNextChar, 45);
-              } else {
-                typingActive = false;
-                applySyntaxHighlighting();
-                const launchBtn = document.getElementById("launch");
-                launchBtn.style.display = "block";
-                launchBtn.style.animation = "fadeInUp 0.5s ease";
-              }
             }
-          }
         }
-
+        
         window.typedLinesCache = [];
         typeNextChar();
-
+        
         // ------------------------------
         // FIREWORKS & PARTICLE SYSTEM - GOLDEN & PINK THEME
         // ------------------------------
         const canvas = document.getElementById("fx");
         const ctx = canvas.getContext("2d");
-
+        
         function resizeCanvas() {
-          canvas.width = window.innerWidth;
-          canvas.height = window.innerHeight;
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
         }
         window.addEventListener("resize", resizeCanvas);
         resizeCanvas();
-
+        
         let particlesArray = [];
-
+        
         function createFirework(x, y) {
-          const particleCount = 80 + Math.floor(Math.random() * 50);
-          for (let i = 0; i < particleCount; i++) {
-            const angle = Math.random() * Math.PI * 2;
-            const speed = 2 + Math.random() * 7;
-            const vx = Math.cos(angle) * speed * (Math.random() * 1.3);
-            const vy = Math.sin(angle) * speed * (Math.random() * 1.3);
-            const isPink = Math.random() > 0.6;
-            particlesArray.push({
-              x,
-              y,
-              vx,
-              vy,
-              size: Math.random() * 3.5 + 1,
-              life: 80 + Math.random() * 45,
-              maxLife: 120,
-              color: isPink
-                ? `hsl(${330 + Math.random() * 30}, 85%, 65%)`
-                : `hsl(${45 + Math.random() * 30}, 90%, 60%)`,
-              gravity: 0.1,
-            });
-          }
-          // extra sparkles
-          for (let i = 0; i < 25; i++) {
-            particlesArray.push({
-              x: x + (Math.random() - 0.5) * 20,
-              y: y + (Math.random() - 0.5) * 20,
-              vx: (Math.random() - 0.5) * 4,
-              vy: (Math.random() - 0.8) * 4.5,
-              size: Math.random() * 2.5,
-              life: 50,
-              maxLife: 60,
-              color: `hsl(${Math.random() * 360}, 85%, 70%)`,
-              gravity: 0.07,
-            });
-          }
-        }
-
-        function randomFirework() {
-          const x = Math.random() * canvas.width;
-          const y = Math.random() * (canvas.height * 0.7) + 40;
-          createFirework(x, y);
-        }
-
-        let fireworkInterval = setInterval(() => {
-          const finalDivElem = document.getElementById("final");
-          if (finalDivElem.style.display !== "block") {
-            randomFirework();
-            if (Math.random() > 0.6) setTimeout(randomFirework, 180);
-          } else {
-            for (let i = 0; i < 3; i++)
-              setTimeout(() => randomFirework(), i * 150);
-          }
-        }, 900);
-
-        function animateParticles() {
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          for (let i = 0; i < particlesArray.length; i++) {
-            const p = particlesArray[i];
-            p.x += p.vx;
-            p.y += p.vy;
-            if (p.gravity) p.vy += p.gravity;
-            p.life -= 1.3;
-            const lifeFactor = Math.min(1, p.life / p.maxLife);
-            ctx.globalAlpha = Math.max(0, lifeFactor * 0.9);
-            ctx.fillStyle = p.color;
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-            ctx.fill();
-            if (p.life <= 0) {
-              particlesArray.splice(i, 1);
-              i--;
+            const particleCount = 80 + Math.floor(Math.random() * 50);
+            for (let i = 0; i < particleCount; i++) {
+                const angle = Math.random() * Math.PI * 2;
+                const speed = 2 + Math.random() * 7;
+                const vx = Math.cos(angle) * speed * (Math.random() * 1.3);
+                const vy = Math.sin(angle) * speed * (Math.random() * 1.3);
+                const isPink = Math.random() > 0.6;
+                particlesArray.push({
+                    x, y, vx, vy,
+                    size: Math.random() * 3.5 + 1,
+                    life: 80 + Math.random() * 45,
+                    maxLife: 120,
+                    color: isPink ? `hsl(${330 + Math.random() * 30}, 85%, 65%)` : `hsl(${45 + Math.random() * 30}, 90%, 60%)`,
+                    gravity: 0.1
+                });
             }
-          }
-          ctx.globalAlpha = 1;
-          requestAnimationFrame(animateParticles);
+            for (let i = 0; i < 25; i++) {
+                particlesArray.push({
+                    x: x + (Math.random() - 0.5) * 20,
+                    y: y + (Math.random() - 0.5) * 20,
+                    vx: (Math.random() - 0.5) * 4,
+                    vy: (Math.random() - 0.8) * 4.5,
+                    size: Math.random() * 2.5,
+                    life: 50,
+                    maxLife: 60,
+                    color: `hsl(${Math.random() * 360}, 85%, 70%)`,
+                    gravity: 0.07
+                });
+            }
+        }
+        
+        function randomFirework() {
+            const x = Math.random() * canvas.width;
+            const y = Math.random() * (canvas.height * 0.7) + 40;
+            createFirework(x, y);
+        }
+        
+        let fireworkInterval = setInterval(() => {
+            const finalDivElem = document.getElementById("final");
+            if (finalDivElem.style.display !== "block") {
+                randomFirework();
+                if (Math.random() > 0.6) setTimeout(randomFirework, 180);
+            } else {
+                for (let i = 0; i < 3; i++) setTimeout(() => randomFirework(), i * 150);
+            }
+        }, 900);
+        
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < particlesArray.length; i++) {
+                const p = particlesArray[i];
+                p.x += p.vx;
+                p.y += p.vy;
+                if (p.gravity) p.vy += p.gravity;
+                p.life -= 1.3;
+                const lifeFactor = Math.min(1, p.life / p.maxLife);
+                ctx.globalAlpha = Math.max(0, lifeFactor * 0.9);
+                ctx.fillStyle = p.color;
+                ctx.beginPath();
+                ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                ctx.fill();
+                if (p.life <= 0) {
+                    particlesArray.splice(i, 1);
+                    i--;
+                }
+            }
+            ctx.globalAlpha = 1;
+            requestAnimationFrame(animateParticles);
         }
         animateParticles();
-
-        setInterval(() => {
-          if (Math.random() > 0.55) randomFirework();
-        }, 1100);
-
+        
+        setInterval(() => { if (Math.random() > 0.55) randomFirework(); }, 1100);
+        
         // ------------------------------
         // LAUNCH BUTTON LOGIC
         // ------------------------------
@@ -732,107 +731,104 @@
         const loveBtn = document.getElementById("loveBtn");
         const loveModal = document.getElementById("loveModal");
         const closeLoveBtn = document.getElementById("closeLoveBtn");
-
+        
         launchBtn.onclick = () => {
-          terminalDivElem.style.transition = "opacity 0.6s ease";
-          terminalDivElem.style.opacity = "0";
-          launchBtn.style.opacity = "0";
-          launchBtn.style.transform = "translateX(-50%) scale(0.8)";
-          setTimeout(() => {
-            terminalDivElem.style.display = "none";
-            launchBtn.style.display = "none";
-            finalDiv.style.display = "block";
-            loveBtn.style.display = "block";
-            // massive celebration fireworks
-            for (let i = 0; i < 15; i++) {
-              setTimeout(() => {
-                const cx = canvas.width * (0.2 + Math.random() * 0.6);
-                const cy = canvas.height * (0.3 + Math.random() * 0.5);
-                createFirework(cx, cy);
-              }, i * 80);
-            }
-            let extraSalvo = setInterval(() => {
-              if (finalDiv.style.display === "block") {
-                for (let s = 0; s < 2; s++) randomFirework();
-              } else {
-                clearInterval(extraSalvo);
-              }
-            }, 1600);
-          }, 500);
+            terminalDivElem.style.transition = "opacity 0.6s ease";
+            terminalDivElem.style.opacity = "0";
+            launchBtn.style.opacity = "0";
+            launchBtn.style.transform = "translateX(-50%) scale(0.8)";
+            setTimeout(() => {
+                terminalDivElem.style.display = "none";
+                launchBtn.style.display = "none";
+                finalDiv.style.display = "block";
+                loveBtn.style.display = "block";
+                for (let i = 0; i < 15; i++) {
+                    setTimeout(() => {
+                        const cx = canvas.width * (0.2 + Math.random() * 0.6);
+                        const cy = canvas.height * (0.3 + Math.random() * 0.5);
+                        createFirework(cx, cy);
+                    }, i * 80);
+                }
+                let extraSalvo = setInterval(() => {
+                    if (finalDiv.style.display === "block") {
+                        for (let s = 0; s < 2; s++) randomFirework();
+                    } else {
+                        clearInterval(extraSalvo);
+                    }
+                }, 1600);
+            }, 500);
         };
-
+        
         // ------------------------------
         // LOVE BUTTON FUNCTIONALITY
         // ------------------------------
         function openLoveModal() {
-          loveModal.classList.add("active");
-          // extra romantic fireworks
-          for (let i = 0; i < 8; i++) {
-            setTimeout(() => {
-              const cx = canvas.width * (0.2 + Math.random() * 0.6);
-              const cy = canvas.height * (0.3 + Math.random() * 0.5);
-              createFirework(cx, cy);
-            }, i * 100);
-          }
-        }
-
-        function closeLoveModal() {
-          loveModal.classList.remove("active");
-        }
-
-        if (loveBtn) {
-          loveBtn.onclick = function (e) {
-            e.stopPropagation();
-            openLoveModal();
-          };
-        }
-
-        if (closeLoveBtn) {
-          closeLoveBtn.onclick = function (e) {
-            e.stopPropagation();
-            closeLoveModal();
-          };
-        }
-
-        if (loveModal) {
-          loveModal.addEventListener("click", function (e) {
-            if (e.target === loveModal) {
-              closeLoveModal();
+            loveModal.classList.add("active");
+            for (let i = 0; i < 8; i++) {
+                setTimeout(() => {
+                    const cx = canvas.width * (0.2 + Math.random() * 0.6);
+                    const cy = canvas.height * (0.3 + Math.random() * 0.5);
+                    createFirework(cx, cy);
+                }, i * 100);
             }
-          });
         }
-
+        
+        function closeLoveModal() {
+            loveModal.classList.remove("active");
+        }
+        
+        if (loveBtn) {
+            loveBtn.onclick = function(e) {
+                e.stopPropagation();
+                openLoveModal();
+            };
+        }
+        
+        if (closeLoveBtn) {
+            closeLoveBtn.onclick = function(e) {
+                e.stopPropagation();
+                closeLoveModal();
+            };
+        }
+        
+        if (loveModal) {
+            loveModal.addEventListener("click", function(e) {
+                if (e.target === loveModal) {
+                    closeLoveModal();
+                }
+            });
+        }
+        
         // generate golden stars
         function generateStars() {
-          for (let i = 0; i < 150; i++) {
-            const star = document.createElement("div");
-            star.classList.add("star-dust");
-            star.style.position = "absolute";
-            star.style.width = Math.random() * 3 + 1 + "px";
-            star.style.height = star.style.width;
-            star.style.backgroundColor = `rgba(255, 215, 0, ${Math.random() * 0.7 + 0.2})`;
-            star.style.left = Math.random() * 100 + "%";
-            star.style.top = Math.random() * 100 + "%";
-            star.style.animationDelay = Math.random() * 5 + "s";
-            star.style.animationDuration = 2 + Math.random() * 4 + "s";
-            star.style.zIndex = 0;
-            document.body.appendChild(star);
-          }
+            for (let i = 0; i < 150; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star-dust');
+                star.style.position = 'absolute';
+                star.style.width = Math.random() * 3 + 1 + 'px';
+                star.style.height = star.style.width;
+                star.style.backgroundColor = `rgba(255, 215, 0, ${Math.random() * 0.7 + 0.2})`;
+                star.style.left = Math.random() * 100 + '%';
+                star.style.top = Math.random() * 100 + '%';
+                star.style.animationDelay = Math.random() * 5 + 's';
+                star.style.animationDuration = 2 + Math.random() * 4 + 's';
+                star.style.zIndex = 0;
+                document.body.appendChild(star);
+            }
         }
         generateStars();
-
-        // ensure final background consistency
+        
         document.body.style.backgroundColor = "#030617";
-        const style = document.createElement("style");
+        const style = document.createElement('style');
         style.textContent = `#final { background: rgba(10, 5, 20, 0.7); backdrop-filter: blur(24px); border: 1px solid rgba(255, 215, 0, 0.5); } .blessing { background: none; -webkit-text-fill-color: #fde68a; color: #fde68a; }`;
         document.head.appendChild(style);
-
+        
         loveBtn.style.display = "none";
-
+        
         if (loveModal) {
-          loveModal.classList.remove("active");
+            loveModal.classList.remove("active");
         }
-      })();
-    </script>
-  </body>
+    })();
+</script>
+</body>
 </html>
